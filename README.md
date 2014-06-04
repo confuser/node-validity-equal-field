@@ -29,6 +29,8 @@ var schema = schemata(
     })
 ```
 
+A custom error message can also be passed ```createValidator('vpassword', 'Passwords do not match')```
+
 ## API
 
 ### var validate = createValidator()
