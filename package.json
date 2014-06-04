@@ -1,0 +1,43 @@
+{
+  "name": "validity-equal-field",
+  "version": "0.0.1",
+  "description": "Validity style validator to ensure a property is equal to another schemata field",
+  "main": "validator.js",
+  "directories": {
+    "test": "test"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint .",
+    "checkStyle": "./node_modules/.bin/jscs .",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:confuser/node-validity-equal-field"
+  },
+  "keywords": [
+    "validity",
+    "validation",
+    "equal",
+    "field",
+    "schemata"
+  ],
+  "author": "James Mortemore <jamesmortemore@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/confuser/node-validity-equal-field/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "istanbul": "~0.1.44",
+    "should": "2",
+    "jshint": "~2.3.0",
+    "jscs": "^1.4.5"
+  }
+}
